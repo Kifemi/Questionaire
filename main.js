@@ -9,16 +9,15 @@ var answerIndexes = new Array();
 
 
 function onStart(){
-var q1 = new Question("Paljonko kello?", ["aika paljon","Todella paljon", "aaaah!"]);
-var q2 = new Question("Voiko kalaa syödä?", ["kyllä voi","ei voi"]);
-questions.push(q1,q2);
+    var q1 = new Question("Paljonko kello?", ["aika paljon","Todella paljon", "aaaah!"]);
+    var q2 = new Question("Voiko kalaa syödä?", ["kyllä voi","ei voi"]);
+    questions.push(q1,q2);
 
-
-questionline =  document.getElementById("questionline")
-answerBlock =  document.getElementById("answerBlock")
-endBlock = document.getElementById("endBlock")
-document.getElementById("questionsBlock").hidden = true;
-document.getElementById("endSummary").hidden = true;
+    questionline =  document.getElementById("questionline")
+    answerBlock =  document.getElementById("answerBlock")
+    endBlock = document.getElementById("endBlock")
+    document.getElementById("questionsBlock").hidden = true;
+    document.getElementById("endSummary").hidden = true;
 }
 
 function AskNextQuestion(){
@@ -45,13 +44,12 @@ function ShowEndSummary(){
 
 function startQuestionnaire(){
     currentQuestionID = 0;
-    answerIndexes = new Array();
+    answerIndexes = [];
     endBlock.innerHTML = "";
     document.getElementById("startBlock").hidden = true;
     document.getElementById("questionsBlock").hidden = false;
     document.getElementById("endSummary").hidden = true;
     AskNextQuestion();
-
 }
 
 function showQuestion(question){
@@ -66,7 +64,7 @@ function ShowAnswerOptions(answers){
     
     answerArray.forEach(element => {
         answerBlock.innerHTML += "<p>"+
-        element+" <button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+")> valitse</button>"
+        element+" <button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> valitse</button>"
         //note no need for " " in onclick
     });
 }

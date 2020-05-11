@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="onStart()">
+<body onload="onStart()" class="body">
 
-<div id="startBlock">
-    <h1>Tervetuloa</h1>
-    <p>Vastaa kysymyksiin parhaan kykysi mukaan.</p>
-    <button onclick="startQuestionnaire()" >Aloita</button>
-</div>
+    <div class="startBlock" id="startBlock">
+        <h1 class="header">Tervetuloa</h1>
+        <p>Vastaa kysymyksiin parhaan kykysi mukaan.</p>
+        <button onclick="startQuestionnaire()" class="btnColor btn">Aloita</button>
+    </div>
 
-<div id="questionsBlock">
-<h1>Kysymys</h1>
-    <p id="questionline"></p>
-    <p id="answerBlock"></p>
-    
-</div>
+    <div id="questionsBlock">
+    <h1 class="header">Kysymys</h1>
+        <p id="questionline" class="question"></p>
+        <p id="answerBlock"></p>
+    </div>
 
-<div id="endSummary">
-    <h1>Kooste</h1>
-    <div id="endBlock"></div>
-    <button onclick="startQuestionnaire()" >Aloita alusta</button>
-</div>
+    <div id="endSummary">
+        <h1 class="header">Kooste</h1>
+        <div id="endBlock"></div>
+        <button onclick="startQuestionnaire()" class="btnColor btn">Aloita alusta</button>
+    </div>
 
-<script src="myClasses.js"></script>
-<script src="main.js"></script>
+    <script src="myClasses.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

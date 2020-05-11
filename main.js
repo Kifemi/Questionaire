@@ -5,12 +5,11 @@ var answerBlock;
 var endBlock;
 
 var currentQuestionID =0;
-var answerIndexes = new Array();
-
+var answerIndexes = [];
 
 function onStart(){
-    var q1 = new Question("Paljonko kello?", ["aika paljon","Todella paljon", "aaaah!"]);
-    var q2 = new Question("Voiko kalaa syödä?", ["kyllä voi","ei voi"]);
+    var q1 = new Question("0,9999999.... = ?", ["0,99999999","1", "&infin;"]);
+    var q2 = new Question("1 + 2 + 3 + 4 + 5 + .... = ?", ["&infin;","-1/12", "15", "0"]);
     questions.push(q1,q2);
 
     questionline =  document.getElementById("questionline")
@@ -38,7 +37,7 @@ function ShowEndSummary(){
     let answerIndexcounter = 0
     questions.forEach(element => {
         endBlock.innerHTML += Question.getQuestion(element)
-        +" <P>vastasit: "+Question.getAnswer(element, answerIndexes[answerIndexcounter]) 
+        +" <P class=\"summary\">vastasit: "+Question.getAnswer(element, answerIndexes[answerIndexcounter]) 
         answerIndexcounter ++;})
 }
 
@@ -63,7 +62,7 @@ function ShowAnswerOptions(answers){
     var answerArray = Array.from(answers);
     
     answerArray.forEach(element => {
-        answerBlock.innerHTML += "<p>"+
+        answerBlock.innerHTML += "<p class=\"answer\">"+
         element+" <button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> valitse</button>"
         //note no need for " " in onclick
     });

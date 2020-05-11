@@ -1,16 +1,29 @@
 * {
     font-size: large;
+    text-align: center;
 }
 
 .header {
     font-size: xx-large;
     font-family: verdana;
+    text-shadow: 2px 2px 5px black;
 }
 
 .question {
     font-size: x-large;
     color: rgb(87, 12, 117);
     font-family: Helvetica;
+    text-shadow: 2px 2px 3px black;
+}
+
+.answer {
+    font-size: larger;
+    color: black;
+}
+
+.summary {
+    font-size: x-large;
+    color: black;
 }
 
 h1 {
@@ -20,6 +33,8 @@ h1 {
 .btnColor {
     background-color: #748ced;
     color: hsl(0, 0%, 0%);
+    border: 3px solid black; 
+    border-radius: 25px;
 }
 
 .btn {

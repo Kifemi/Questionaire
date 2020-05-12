@@ -15,8 +15,12 @@
     background: linear-gradient(to bottom, var(--main-bg-color) 0%, var(--secondary-bg-color) 100%);
 }
 
-.boxShadows {
+.titleBarShadow {
     box-shadow: 10px 10px 5px black;
+}
+
+.boxShadows {
+    box-shadow: 0px 0px 20px black;
 }
 
 #headerText {
@@ -53,12 +57,15 @@
 .question {
     font-size: x-large;
     color: black;
+    background-color: var(--main-bg-color);
+    text-align: center;
 }
 
 .headerText {
     font-size: xx-large;
     font-family: verdana;
     text-align: center;
+    font-weight: bold;
 }
 
 .btnColor {
@@ -74,41 +81,21 @@
 }
 
 .answerBlock {
+    
 }
 
 tr:hover {
     background-color: var(--secondary-bg-color);
+    font-weight: bold;
 }
-/* .col {
-    border: dotted black;
-} */
-
-/* * {
-    font-size: large;
-    text-align: center;
-}
-
-
-
-
-
-
 
 .summary {
     font-size: x-large;
     color: black;
 }
 
-
-
-.btn {
-    padding: 5px;
-}
-
-.body {
-    background-image: url(https://previews.123rf.com/images/rungaroon/rungaroon1410/rungaroon141000640/32923640-the-concept-of-thinking-background-with-brain-.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+/* @font-face {
+    font-family: myFirstFont;
+    src: url(E:\Ohjelmointi\Diginikkarit\Harjoitukset\Fontti);
 } */
 

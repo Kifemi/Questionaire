@@ -10,42 +10,48 @@
     
     <title>Questionnaire</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b61ab8a5e4.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="onStart()">
 
     <div class="container-fluid">
         <div class="row pb-4 px-4 pt-1">
-            <div class="col upperTitleBar header text-center boxShadows">
+            <div class="col upperTitleBar header text-center titleBarShadow">
                 <h1 id="headerText">
                     Title
                 </h1>
             </div>
         </div>
         <div class="row middleRow px-4 pb-5">
-            <div class="col col-3 col-left align-self-start h-100 sideBars boxShadows">
-                
-                <ul>
-                    <li>Aloita</li>
-                    <li>Git Gud</li>
-                    <li>Be Gud</li>
-                </ul>
+            <div class="col col-lg-2 col-md-1 col-sm-1 d-none d-sm-block col-left align-self-start h-100 sideBars boxShadows">
+                <div class="d-none d-lg-block">
+                    <span style="font-size: 30px;">
+                        <i class="far fa-question-circle"></i>
+                    </span>
+                    <ul>
+                        <li>Aloita</li>
+                        <li>Git Gud</li>
+                        <li>Be Gud</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col mainArea boxShadows">
+            <div class="col mainArea boxShadows d-block">
                 <div class="startBlock" id="startBlock">
                     <h1 class="headerText">Tervetuloa</h1>
                     <p class="summary">Vastaa kysymyksiin parhaan kykysi mukaan.</p>
-                    <button onclick="startQuestionnaire()" class="btnColor btn">Aloita</button>
+                    <button onclick="startQuestionnaire()" class="btnColor btn"> 
+                        <span style="font-size: 30px;">
+                            <i class="far fa-hand-point-up">  Aloita</i>
+                        </span>
+                    </button>
                 </div>
             
                 <div id="questionsBlock">
                 <h1 class="headerText">Kysymys</h1>
                     <p id="questionline" class="question"></p>
-                    <!-- <p id="answerBlock"></p> -->
-                    <table class="table answerBlock">
-                        <tbody id="answerBlock">
-
-                        </tbody>
+                    <table class="table answerBlock" onclick="answerButtonClicked">
+                        <tbody id="answerBlock"> </tbody>
                     </table>
                 </div>
             
@@ -55,26 +61,19 @@
                     <button onclick="startQuestionnaire()" class="btnColor btn">Aloita alusta</button>
                 </div>
             </div>
-            <div class="col col-3 col-right align-self-end h-100 sideBars boxShadows">
-                <blockquote class="blockquote-reverse">
-                    <p>GLXBLT!</p>
-                    <footer>Quote by <cite title="Hortense McDuck">Hortense McDuck</cite></footer>
-                </blockquote>
+            <div class="col col-lg-2 col-md-1 col-sm-1 d-none d-sm-block col-right align-self-end h-100 sideBars boxShadows">
+                <div class="d-none d-lg-block">
+                    <blockquote class="blockquote-reverse">
+                        <p>GLXBLT!</p>
+                        <footer>Quote by <cite title="Hortense McDuck">Hortense McDuck</cite></footer>
+                    </blockquote>
+                </div>
             </div>
         </div>
         <div class="row lowerBar upperAndLowerBar">
             <div class="col-12">
-                Hello World
+                Täällä ei ole mitään nähtävää
             </div>
-        </div>
-
-        <div class="container">
-            <table class="table">
-                <tbody>
-                    <td>asdf</td>
-                    <td>Blop</td>
-                </tbody>
-            </table>
         </div>
     </div>
 

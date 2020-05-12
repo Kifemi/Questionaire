@@ -37,7 +37,7 @@ function ShowEndSummary(){
     let answerIndexcounter = 0
     questions.forEach(element => {
         endBlock.innerHTML += Question.getQuestion(element)
-        +" <P class=\"summary\">vastasit: "+Question.getAnswer(element, answerIndexes[answerIndexcounter]) 
+        +" <P class=\"summary\">Vastasit: "+Question.getAnswer(element, answerIndexes[answerIndexcounter]) 
         answerIndexcounter ++;})
 }
 
@@ -62,8 +62,7 @@ function ShowAnswerOptions(answers){
     var answerArray = Array.from(answers);
     
     answerArray.forEach(element => {
-        answerBlock.innerHTML += "<tr>" + "<td><button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> Valitse</button></td>" +
-        "<td>" + element + "</td>" + "</tr>"
+        answerBlock.innerHTML += "<tr>" + "<td><button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor ml-3 mr-5\"> Valitse</button>" + element + "</td>" + "</tr>"
         //answerBlock.innerHTML += "<a href=\"#\" class=\"list-group-item\"> <button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> Valitse</button> " + "\t\t" + element + "</a>"
         //note no need for " " in onclick
     });

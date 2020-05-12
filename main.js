@@ -62,8 +62,9 @@ function ShowAnswerOptions(answers){
     var answerArray = Array.from(answers);
     
     answerArray.forEach(element => {
-        answerBlock.innerHTML += "<p class=\"answer\">"+
-        element+" <button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> valitse</button>"
+        answerBlock.innerHTML += "<tr>" + "<td><button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> Valitse</button></td>" +
+        "<td>" + element + "</td>" + "</tr>"
+        //answerBlock.innerHTML += "<a href=\"#\" class=\"list-group-item\"> <button onclick=AnswerButtonClicked("+answerArray.indexOf(element)+") class=\"btnColor\"> Valitse</button> " + "\t\t" + element + "</a>"
         //note no need for " " in onclick
     });
 }
